@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Function</title>
+
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <h2 class="text-center text-red-500">Demo js function</h2>
+
+      <p>In nội dung bất cho 3 thẻ p và mỗi thẻ có 1 màu bg khác nhau</p>
+      <p class="txt1 bg-gray-500 p-4"></p>
+      <p class="txt2 bg-gray-500 p-4 mt-2"></p>
+      <p id="txt3" class="txt3 bg-gray-500 p-4 mt-2"></p>
+    </div>
+
+    <br /><br /><br />
+
+    <div class="container mx-auto">
+      <h3 class="text-center text-red-500 text-2xl">
+        Demo function có giá trị trả về
+      </h3>
+      <div>
+        <label
+          for="price"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >Giá tiền</label
+        >
+        <input
+          type="text"
+          id="price"
+          class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        />
+      </div>
+      <div>
+        <label
+          for="percent"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >tỉ lệ giảm giá</label
+        >
+        <input
+          type="text"
+          id="percent"
+          class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        />
+      </div>
+
+      <button
+        id="handlePrice"
+        type="button"
+        class="mt-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        tính
+      </button>
+
+      <div id="total">Tổng tiền: <span></span></div>
+    </div>
+
+    <br /><br /><br />
+
+    <div class="container mx-auto">
+      <h3 class="text-center text-red-500 text-2xl">
+        Demo function expression
+      </h3>
+
+      <h4 class="text-center text-green-500 text-xl mt-3">Tính tiền món ăn</h4>
+      <div>
+        <label
+          for="price"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >Giá tiền</label
+        >
+        <input
+          type="text"
+          id="priceFood"
+          class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        />
+      </div>
+      <div>
+        <label
+          for="percent"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >số lượng món</label
+        >
+        <input
+          type="text"
+          id="quality"
+          class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        />
+      </div>
+
+      <button
+        id="handlePriceFood"
+        type="button"
+        class="mt-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        tính
+      </button>
+
+      <div id="totalFood">Tổng tiền: <span></span></div>
+    </div>
+
+    <!-- <script src="./js/method.js"></script> -->
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

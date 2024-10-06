@@ -151,6 +151,12 @@ const sayHello = function () {
   console.log("hello");
 };
 
+const sayHelloPerson = function () {
+  console.log("hello");
+};
+
+// sayHelloPerson = "abcd";
+
 // ARROW FUNCTION
 /*
 
@@ -179,7 +185,79 @@ const add = (number1, number2) => {
   return number1 + number2;
 };
 
+const addOneNumber = (number) => number;
+
 const addNumber = (number1, number2) => number1 + number2;
 
 const testArrowFunction = addNumber(4, 5);
 console.log("testArrowFunction: ", testArrowFunction);
+
+// BLOCK SCOPE
+// global scope: biến toàn cục
+// những biến khai báo bên ngoài, không nằm trong hàm thì là biến toàn cục
+let name1 = "Nguyễn Văn A";
+var name = "ABC";
+console.log("name khai báo bằng var bên ngoài function: ", name);
+
+// local scope: biến cục bộ
+// biến cục bộ được khai báo bên trong hàm, sử dụng bên ngoài hàm thì sẽ bị lỗi is not defined
+const demoScope = () => {
+  let name2 = "Nguyễn Văn B";
+  var name = "XYZ;";
+  console.log("name khai báo bằng var bên trong function: ", name);
+  console.log("name trong function: ", name2);
+
+  console.log("name được khai báo bên ngoài scope", name1);
+};
+
+console.log("name ngoài function", name1);
+// console.log("name trong function", name2); // is not definde
+
+demoScope();
+
+let score = 8;
+if (score > 8) {
+  let loai = "giỏi";
+  console.log("loại bên trong if: ", loai);
+}
+// console.log("loại bên ngoài if: ", loai);
+
+/*
+  CALLBACK FUNCTION
+  Là một hàm được truyền vào hàm khác như 1 đối số
+*/
+function xepLoaiSinhVien(diem, callback) {
+  let xepLoai;
+  // let xepLoai: string;
+
+  if (diem >= 8) {
+    xepLoai = "Giỏi";
+  } else if (diem >= 5) {
+    xepLoai = "Khá";
+  } else {
+    xepLoai = "Trung Bình";
+  }
+
+  callback(xepLoai);
+  // inXepLoai(xepLoai);
+}
+
+function inXepLoai(xepLoai) {
+  console.log(`Sinh viên được xếp loại: ${xepLoai}`);
+}
+
+xepLoaiSinhVien(8.5, inXepLoai);
+
+function demoClick() {
+  console.log("clicked");
+}
+
+document.querySelector("id").onclick = demoClick;
+
+// react => nextjs
+// vuejs => nuxtjs
+// angular(angularjs, angular3-4-5)
+// <div></div>
+// angular: ['html']
+// react: {'html'}
+// vue: [{'html'}]

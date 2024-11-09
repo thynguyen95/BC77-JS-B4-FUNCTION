@@ -32,7 +32,7 @@ import { getElement } from "./method.js";
 */
 
 function handleSayHello(name) {
-  console.log("Xin chào", name);
+    console.log("Xin chào", name);
 }
 
 // gọi hàm
@@ -61,11 +61,11 @@ handleSayHello("Tiêns");
     + làm cho hàm rõ ràng hơn
  */
 function printText(selector, content, bgColor, fSize = "20px") {
-  let element = document.querySelector(selector);
+    let element = document.querySelector(selector);
 
-  element.innerHTML = content;
-  element.style.background = bgColor;
-  element.style.fontSize = fSize;
+    element.innerHTML = content;
+    element.style.background = bgColor;
+    element.style.fontSize = fSize;
 }
 
 // khi gọi hàm, tham số truyền vào phải đúng thứ tự với tham số khi định nghĩa hàm
@@ -87,22 +87,22 @@ printText("#txt3", "hello lần 3", "green", "50px");
 */
 
 function tinhTienGiamGia(giaTien, giamGia) {
-  let total = giaTien - giaTien * (giamGia / 100);
+    let total = giaTien - giaTien * (giamGia / 100);
 
-  return total;
+    return total;
 }
 
 // core
 document.querySelector("#handlePrice").onclick = function () {
-  let price = getElement("#price").value * 1;
-  console.log("price: ", price);
-  let percent = getElement("#percent").value * 1;
-  console.log("percent: ", percent);
+    let price = getElement("#price").value * 1;
+    console.log("price: ", price);
+    let percent = getElement("#percent").value * 1;
+    console.log("percent: ", percent);
 
-  //   let total = price - price * (percent / 100);
-  let total = tinhTienGiamGia(price, percent);
+    //   let total = price - price * (percent / 100);
+    let total = tinhTienGiamGia(price, percent);
 
-  getElement("#total span").innerHTML = total;
+    getElement("#total span").innerHTML = total;
 };
 
 // FUNCTION EXPRESSIONS
@@ -113,18 +113,18 @@ document.querySelector("#handlePrice").onclick = function () {
 */
 
 let handleTotalPriceFood = function (giaTien, soLuong) {
-  let total = giaTien * soLuong;
+    let total = giaTien * soLuong;
 
-  return total;
+    return total;
 };
 
 getElement("#handlePriceFood").onclick = function () {
-  let price = getElement("#priceFood").value * 1;
-  let quality = getElement("#quality").value * 1;
+    let price = getElement("#priceFood").value * 1;
+    let quality = getElement("#quality").value * 1;
 
-  let total = handleTotalPriceFood(price, quality);
+    let total = handleTotalPriceFood(price, quality);
 
-  getElement("#totalFood span").innerHTML = total;
+    getElement("#totalFood span").innerHTML = total;
 };
 
 /*
@@ -143,16 +143,16 @@ var tenBien;
 
 sayHi();
 function sayHi() {
-  console.log("hi");
+    console.log("hi");
 }
 
 // sayHello(); // bị lỗi : không được truy cập vào hàm trước khi khởi tạo hàm
 const sayHello = function () {
-  console.log("hello");
+    console.log("hello");
 };
 
 const sayHelloPerson = function () {
-  console.log("hello");
+    console.log("hello");
 };
 
 // sayHelloPerson = "abcd";
@@ -163,7 +163,7 @@ const sayHelloPerson = function () {
 */
 // declaration
 function myFunction(number1, number2) {
-  return number1 + number2;
+    return number1 + number2;
 }
 
 // expression
@@ -173,7 +173,7 @@ function myFunction(number1, number2) {
 
 // expression + arrow function
 const myNewFunction = (number1, number2) => {
-  return number1 + number2;
+    return number1 + number2;
 };
 
 // function add(number1, number2) {
@@ -182,7 +182,7 @@ const myNewFunction = (number1, number2) => {
 
 // expression + arrow function
 const add = (number1, number2) => {
-  return number1 + number2;
+    return number1 + number2;
 };
 
 const addOneNumber = (number) => number;
@@ -202,12 +202,12 @@ console.log("name khai báo bằng var bên ngoài function: ", name);
 // local scope: biến cục bộ
 // biến cục bộ được khai báo bên trong hàm, sử dụng bên ngoài hàm thì sẽ bị lỗi is not defined
 const demoScope = () => {
-  let name2 = "Nguyễn Văn B";
-  var name = "XYZ;";
-  console.log("name khai báo bằng var bên trong function: ", name);
-  console.log("name trong function: ", name2);
+    let name2 = "Nguyễn Văn B";
+    var name = "XYZ;";
+    console.log("name khai báo bằng var bên trong function: ", name);
+    console.log("name trong function: ", name2);
 
-  console.log("name được khai báo bên ngoài scope", name1);
+    console.log("name được khai báo bên ngoài scope", name1);
 };
 
 console.log("name ngoài function", name1);
@@ -217,8 +217,8 @@ demoScope();
 
 let score = 8;
 if (score > 8) {
-  let loai = "giỏi";
-  console.log("loại bên trong if: ", loai);
+    let loai = "giỏi";
+    console.log("loại bên trong if: ", loai);
 }
 // console.log("loại bên ngoài if: ", loai);
 
@@ -227,32 +227,59 @@ if (score > 8) {
   Là một hàm được truyền vào hàm khác như 1 đối số
 */
 function xepLoaiSinhVien(diem, callback) {
-  let xepLoai;
-  // let xepLoai: string;
+    let xepLoai;
+    // let xepLoai: string;
 
-  if (diem >= 8) {
-    xepLoai = "Giỏi";
-  } else if (diem >= 5) {
-    xepLoai = "Khá";
-  } else {
-    xepLoai = "Trung Bình";
-  }
+    if (diem >= 8) {
+        xepLoai = "Giỏi";
+    } else if (diem >= 5) {
+        xepLoai = "Khá";
+    } else {
+        xepLoai = "Trung Bình";
+    }
 
-  callback(xepLoai);
-  // inXepLoai(xepLoai);
+    callback(xepLoai);
+    // inXepLoai(xepLoai);
 }
 
 function inXepLoai(xepLoai) {
-  console.log(`Sinh viên được xếp loại: ${xepLoai}`);
+    console.log(`Sinh viên được xếp loại: ${xepLoai}`);
 }
 
 xepLoaiSinhVien(8.5, inXepLoai);
 
-function demoClick() {
-  console.log("clicked");
+function demoClick(name) {
+    console.log("clicked", name);
 }
 
-document.querySelector("id").onclick = demoClick;
+// document.querySelector("id").onclick = demoClick;
+
+// Rest parameter
+const number1 = [1, 2, 3, 4];
+console.log("number1: ", ...number1); // 1 2 3 4
+
+const tinhTong = (a, b, c, d) => {
+    return a + b + c + d;
+};
+
+console.log(tinhTong(...number1));
+
+const sum = (...number) => {
+    console.log("...number: ", ...number);
+    // lần chạy 1: total = 10 => 10 + 1 = 11
+    // lần chạy 2: total = 11 => 11 + 2 = 13
+    // lần chạy 3: total = 13 => 13 + 3 = 16
+    return number.reduce((total, num) => {
+        console.log("total: ", total, num);
+        return total + num;
+    }, 10);
+};
+console.log(sum(1, 2, 3));
+// console.log(sum([4, 5, 6, 7, 8, 9]));
+
+// Spread operator
+// 1. tạo 1 mảng mới hoặc sao chép mà không bị trùng địa chỉ ô nhớ
+const number2 = [...number1];
 
 // react => nextjs
 // vuejs => nuxtjs
